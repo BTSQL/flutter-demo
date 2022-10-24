@@ -73,55 +73,6 @@ class _EmailScreenState extends State<EmailScreen> {
                             }));
                   },
                   child: Text("Email 전송"))
-
-              //   Row(
-              //     mainAxisAlignment: MainAxisAlignment.center,
-              //     children: [
-              //       Container(
-              //         width: MediaQuery.of(context).size.width * 0.5,
-              //         margin: const EdgeInsets.only(top: 20),
-              //         child: TextFormField(
-              //           controller: _emailTextCtrl,
-              //           decoration: InputDecoration(labelText: 'Email 주소'),
-              //           focusNode: _focusEmail,
-              //         ),
-              //       )
-              //     ],
-              //   ),
-              //   Row(
-              //     mainAxisAlignment: MainAxisAlignment.center,
-              //     children: [
-              //       Container(
-              //         width: MediaQuery.of(context).size.width * 0.5,
-              //         margin: const EdgeInsets.only(top: 20),
-              //         child: TextFormField(
-              //           controller: _emailTextCtrl,
-              //           decoration: InputDecoration(labelText: '제목'),
-              //           focusNode: _focusTitle,
-              //         ),
-              //       )
-              //     ],
-              //   ),
-              //   Row(
-              //     children: [
-              //       Text("내용", textAlign: Text,),
-              //     ],
-              //   ),
-              //   Row(
-              //     mainAxisAlignment: MainAxisAlignment.center,
-              //     children: [
-              //       Container(
-              //         width: MediaQuery.of(context).size.width * 0.5,
-              //         margin: const EdgeInsets.only(top: 20),
-              //         child: TextFormField(
-              //           controller: _emailTextCtrl,
-              //           decoration: InputDecoration(labelText: 'Email 주소'),
-              //           focusNode: _focusContent,
-              //           maxLines: 10,
-              //         ),
-              //       )
-              //     ],
-              //   ),
             ],
           ),
         ),
