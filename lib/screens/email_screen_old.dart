@@ -1,5 +1,5 @@
 import 'package:devcoean_flutter/controller/email_controller.dart';
-import 'package:devcoean_flutter/models/note_model.dart';
+import 'package:devcoean_flutter/models/email_model.dart';
 import 'package:flutter/material.dart';
 
 class EmailScreen extends StatefulWidget {
@@ -59,7 +59,7 @@ class _EmailScreenState extends State<EmailScreen> {
               ),
               ElevatedButton(
                   onPressed: () async {
-                    NoteModel note = NoteModel(
+                    EmailModel note = EmailModel(
                         email_address: _emailTextCtrl.text,
                         title: _titleTextCtrl.text,
                         content: _contentTextCtrl.text);

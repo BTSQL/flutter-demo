@@ -1,8 +1,8 @@
-class NoteModel {
+class EmailModel {
   String email_address;
   String title;
   String? content;
-  NoteModel({
+  EmailModel({
     required this.email_address,
     required this.title,
     this.content,

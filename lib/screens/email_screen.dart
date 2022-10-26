@@ -1,6 +1,6 @@
 import 'package:devcoean_flutter/controller/email_controller.dart';
 
-import 'package:devcoean_flutter/models/note_model.dart';
+import 'package:devcoean_flutter/models/email_model.dart';
 import 'package:devcoean_flutter/widgets/dev_textfield_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -36,7 +36,7 @@ class _EmailScreenState extends State<EmailScreen> {
               const SizedBox(height: 20),
               ElevatedButton(
                   onPressed: () async {
-                    NoteModel note = NoteModel(
+                    EmailModel note = EmailModel(
                         email_address: _emailTextCtrl.text,
                         title: _titleTextCtrl.text,
                         content: _contentTextCtrl.text);

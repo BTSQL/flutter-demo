@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:devcoean_flutter/models/note_model.dart';
+import 'package:devcoean_flutter/models/email_model.dart';
 import 'package:http/http.dart' as http;
 
 import '../constants/constants.dart';
@@ -16,11 +16,7 @@ class EmailController {
     // 초기화 로직 넣으면 됨
   }
 
-  Future<bool> sendEmail(NoteModel note) async {
-    print(note.email_address);
-    print(note.title);
-    print(note.content);
-
+  Future<bool> sendEmail(EmailModel note) async {
     bool is_success = true;
     try {
       var fastApiUrl;
@@ -47,7 +43,7 @@ class EmailController {
       if (response.statusCode != 200) {
         final errorMessage = responseData['detail'];
         print("error : $errorMessage");
-        throw Exception(errorMessage);
+        // throw Exception(errorMessage);
       }
 
       return is_success;

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class DevTextFieldWidget extends StatelessWidget {
   final TextEditingController TextCtrl;
-  final String hint;
+  final hint;
   final int maxLine;
   DevTextFieldWidget({
     required this.TextCtrl,
@@ -15,9 +15,9 @@ class DevTextFieldWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       controller: TextCtrl,
-      decoration: const InputDecoration(
+      decoration: InputDecoration(
         border: OutlineInputBorder(),
-        hintText: "Email",
+        hintText: hint,
       ),
       maxLines: maxLine,
     );
