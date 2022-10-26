@@ -17,6 +17,10 @@ class EmailController {
   }
 
   Future<bool> sendEmail(NoteModel note) async {
+    print(note.email_address);
+    print(note.title);
+    print(note.content);
+
     bool is_success = true;
     try {
       var fastApiUrl;

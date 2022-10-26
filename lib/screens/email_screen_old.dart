@@ -1,7 +1,5 @@
 import 'package:devcoean_flutter/controller/email_controller.dart';
-
 import 'package:devcoean_flutter/models/note_model.dart';
-import 'package:devcoean_flutter/widgets/dev_textfield_widget.dart';
 import 'package:flutter/material.dart';
 
 class EmailScreen extends StatefulWidget {
@@ -26,14 +24,39 @@ class _EmailScreenState extends State<EmailScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
+            // mainAxisSize: MainAxisSize.max,
             children: [
-              DevTextFieldWidget(TextCtrl: _emailTextCtrl, hint: "Email"),
-              const SizedBox(height: 10),
-              DevTextFieldWidget(TextCtrl: _titleTextCtrl, hint: "title"),
-              const SizedBox(height: 10),
-              DevTextFieldWidget(
-                  TextCtrl: _contentTextCtrl, hint: "Context", maxLine: 5),
-              const SizedBox(height: 20),
+              TextField(
+                controller: _emailTextCtrl,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: "Email",
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              TextField(
+                controller: _titleTextCtrl,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: "title",
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              TextField(
+                controller: _contentTextCtrl,
+                maxLines: 5,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: "Contents",
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
               ElevatedButton(
                   onPressed: () async {
                     NoteModel note = NoteModel(
